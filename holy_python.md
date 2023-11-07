@@ -359,3 +359,142 @@ str = "1.975.000"
 ans_1 = len(str)
 
 print(ans_1)
+
+
+## Exercise 11
+
+### 11a
+
+lst = [11, 100, 99, 1000, 999]
+
+lst.sort()
+
+print(lst)
+
+### 11b
+
+lst = ["Ukraine", "Japan", "Canada", "Kazakhstan", "Taiwan", "India", "Belize"]
+
+lst.sort()
+
+print(lst)
+
+### 11c
+
+lst = [11, 100, 101, 999, 1001]
+
+lst.sort(reverse = True)
+
+print(lst)
+
+### 11d
+
+gift_list = ['socks', '4K drone', 'wine', 'jam']
+
+gift_list.sort(reverse = True)
+
+print(gift_list)
+
+### 11e
+
+NFL = ["Panthers", "Bears", "Dolphins" "Patriots", "Saints", "Giants"]
+
+NFL.sort(reverse = True)
+
+answer_1 = NFL[-1]
+
+print(answer_1)
+
+### 11f
+
+muni=["Melbourne", "Shanghai", "Delhi", "Atlanta", "Moscow", "Montreal"]
+
+muni.sort(reverse = True)
+
+print(muni)
+
+## Exercise 12
+
+### 12a
+
+lst = [11, 100, 99, 1000, 999]
+
+popped_item = lst.pop()
+ 
+print(popped_item)
+print(lst)
+
+### 12b
+
+lst = ["milk", "banana", "eggs", "bread", "broccoli", "lemons"]
+
+item = lst.pop(lst.index("broccoli"))
+
+print(lst, item)
+
+## Exercise 17
+
+### 17a
+
+wrd = "Toscana"
+
+ans_1 = wrd[0:4]
+
+print(ans_1)
+
+### 17b
+
+wrd = "Toscana"
+
+ans_1 = wrd[3:]
+
+print(ans_1)
+
+### 17c
+
+wrd = "Toscana"
+
+ans_1 = wrd[3:6]
+
+print(ans_1)
+
+### 17d
+
+wrd = "Toscana"
+
+ans_1 = wrd[::2]
+
+print (ans_1)
+
+### 17e
+
+wrd = "Toscana"
+
+ans_1 = wrd[1:6:2]
+
+print(ans_1)
+
+### 17f
+
+lst = [0,1,2,3,4]
+
+ans_1 = lst[::-1]
+
+print(ans_1)
+
+### 17g
+
+lst = [0,1,2,3,4]
+
+ans_1 = lst[-2::]
+
+print(ans_1)
+
+### 17h
+
+lst = [40,50,20,30,90]
+
+ans_1 = lst[1:3]
+
+print(ans_1)
+
