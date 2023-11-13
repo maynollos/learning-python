@@ -12,8 +12,6 @@ sumprice =[]
 for i in range(len(shopping)):
     s = 'I need to buy ' + amounts[i] + ' ' + shopping[i]
     print(s)
-   
-for i in range(len(shopping)):
     itemprice = int(amounts[i]) * prices[i]
     sumprice.append(itemprice)
 
