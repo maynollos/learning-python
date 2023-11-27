@@ -7,7 +7,7 @@ nfr = 0   # new fertile rabbits
 print("The first ", n, "numbers of the Rabbit sequence are:")
 for num in range(n):
     print("Iteration Nr.", num, ":")
-    rp = rp + nfr
-    print(rp)        # sets the adder to the output from the previous iteration
-    nfr = nr         # sets output to sum of adder and memory # prints the output
-    nr = rp * k       # sets memory variable to current adder
+    rp = rp + nfr    # add new fertile rabbits to previous number of rabbits
+    print(rp)        # print current number of rabbits
+    nfr = nr         # previous new rabbits are now fertile
+    nr = rp * k      # new rabbits are three times current rabbits
