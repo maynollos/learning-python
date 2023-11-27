@@ -1,8 +1,8 @@
 sequences = {}
-seqgc = {}
+gccontents = {}
 fasta = open("GC_test.fasta", "r")
 
-def gccontent(seq): 
+def gccont(seq): 
     gcon = seq.count("G")
     ccon = seq.count("C")
     gccon = gcon + ccon / len(seq)
@@ -17,9 +17,9 @@ for line in fasta:
 fasta.close()
 
 for seqid in sequences:
-    gccon = gccontent(sequences[seqid])
-    seqgc[seqid] = gccon
+    gccon = gccont(sequences[seqid])
+    gccontents[seqid] = gccon
 
-maxgc = max(seqgc, key=seqgc.get)
+maxgc = max(gccontents, key=gccontents.get)
 print("The sequence with the highest GC content is ", maxgc)
     
