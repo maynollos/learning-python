@@ -1,9 +1,9 @@
 #Given: Two positive integers a and b (a < b < 10000).
 #Return: The sum of all odd integers from a through b, inclusively
 
-a = 10
-b = 100
-result = 0
+a = 4123
+b = 8914
+result = []
 #adder = 0
 
 #while adder <= b-1 :
