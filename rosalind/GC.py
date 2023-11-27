@@ -4,13 +4,15 @@ sequences = {}
 gccontents = {}
 
 # Open the input file
-fasta = open("GC_test.fasta", "r")
+fasta = open("rosalind_gc.txt", "r")
+#fasta = open("gc_test.fasta", "r")
+output = open("GC_output.txt", "w")
 
 # function that calculates the GC content
 def gccont(seq): 
     gcon = seq.count("G")
     ccon = seq.count("C")
-    gccon = gcon + ccon / len(seq)
+    gccon = ((gcon + ccon) / len(seq))*100
     return gccon
 
 # Parsing the fasta file, put IDs and their corresponding
@@ -28,7 +30,13 @@ for seqid in sequences:
     gccon = gccont(sequences[seqid])
     gccontents[seqid] = gccon
 
-# find the ID of the maximum GC content and print it
-maxgc = max(gccontents, key=gccontents.get)
-print("The sequence with the highest GC content is ", maxgc)
+# find the ID of the maximum GC content and print it, also
+# write an output file for uploading to rosalind
+maxgcID = max(gccontents, key=gccontents.get)
+maxgc = max(gccontents.values())
+output.write(str(maxgcID))
+output.write("\n")
+output.write(str(maxgc))
+print("The sequence with the highest GC content is ", maxgcID)
+print("The GC content of this sequence is ", maxgc)
     
