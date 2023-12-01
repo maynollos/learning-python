@@ -2,7 +2,7 @@ numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine
 digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 values = []
 
-digdict = {
+dig_dict = {
     "one": 1, "two": 2, "three": 3, 
     "four": 4, "five": 5, "six": 6, 
     "seven": 7, "eight": 8, "nine": 9, 
@@ -13,31 +13,31 @@ digdict = {
 text = open("puzzle_1_input", "r")
 
 # Function that reads the numerals and digits 
-def readnumber():
+def read_number(line_text):
 
     # Go over each character in the line
-    for char in range(len(lcont)):
+    for char in range(len(line_text)):
     
         # Check for terms that are one (digits) or three to five (numerals) characters long
         # This corresponds wonderfully to the Rosalind exercises :D
         for length in (1,3,4,5):
-            readstr = lcont[char:char+length]
+            read_str = l_cont[char:char+length]
         # Convert the numerals to digits and add the resulting digits to a list
-            if readstr in numbers:
-                numint = str(digdict[readstr])
-                numlist.append(numint)
-            elif readstr in digits:
-                numlist.append(readstr)
+            if read_str in numbers:
+                num_int = str(dig_dict[read_str])
+                num_list.append(num_int)
+            elif read_str in digits:
+                num_list.append(read_str)
     # return the list
-    return(numlist)
+    return(num_list)
 
-for lnr, lcont in enumerate(text):
-    numlist = []
+for l_nr, l_cont in enumerate(text):
+    num_list = []
     # execute the function 
-    linedigs = readnumber()
+    line_digs = read_number(l_cont)
     # concatenate the first and last item of the list and put those in a list
-    lineval = linedigs[0] + linedigs[-1]
-    values.append(int(lineval))
+    line_val = line_digs[0] + line_digs[-1]
+    values.append(int(line_val))
 # sum up
 print(sum(values))
 text.close()
